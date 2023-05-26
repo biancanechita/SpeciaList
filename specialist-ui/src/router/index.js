@@ -19,7 +19,11 @@ const routes = [
         path: "/clinics",
         component: null,
         children: [
-          { path: "", name: "Clinics", component: null },
+          {
+            path: "",
+            name: "Clinics",
+            component: () => import("@/views/Clinics.vue"),
+          },
           { path: "/:id", name: "ClinicDetailsPage", component: null },
         ],
       },
@@ -27,7 +31,11 @@ const routes = [
         path: "/doctors",
         component: null,
         children: [
-          { path: "", name: "Doctors", component: null },
+          {
+            path: "",
+            name: "Doctors",
+            component: () => import("@/views/Doctors.vue"),
+          },
           { path: "/:id", name: "DoctorProfilePage", component: null },
         ],
       },
@@ -35,13 +43,21 @@ const routes = [
         path: "/specializations",
         component: null,
         children: [
-          { path: "", name: "Specializations", component: null },
+          {
+            path: "",
+            name: "Specializations",
+            component: () => import("@/views/Specializations.vue"),
+          },
           { path: "/:id", name: "SpecializationDetailsPage", component: null },
         ],
       },
     ],
   },
-  { path: "/:404(.*)", component: null },
+  {
+    path: "/:404(.*)",
+    name: "NotFoundPage",
+    component: () => import("@/views/NotFound.vue"),
+  },
 ];
 
 const router = createRouter({
