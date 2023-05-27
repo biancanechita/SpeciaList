@@ -19,6 +19,10 @@ public class SpecializationService {
     private final SpecializationRepository specializationRepository;
     private final SpecializationMapper specializationMapper = Mappers.getMapper(SpecializationMapper.class);
 
+    public long count() {
+        return specializationRepository.count();
+    }
+
     public List<SpecializationDTO> findAll() {
         return specializationRepository
                 .findAll()

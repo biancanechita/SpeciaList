@@ -19,6 +19,10 @@ public class CityService {
     private final CityRepository cityRepository;
     private final CityMapper cityMapper = Mappers.getMapper(CityMapper.class);
 
+    public long count() {
+        return cityRepository.count();
+    }
+
     public List<CityDTO> findAll() {
         return cityRepository
                 .findAll()

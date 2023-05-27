@@ -19,6 +19,10 @@ public class ClinicService {
     private final ClinicRepository clinicRepository;
     private final ClinicMapper clinicMapper = Mappers.getMapper(ClinicMapper.class);
 
+    public long count() {
+        return clinicRepository.count();
+    }
+
     public List<ClinicDTO> findAll() {
         return clinicRepository
                 .findAll()

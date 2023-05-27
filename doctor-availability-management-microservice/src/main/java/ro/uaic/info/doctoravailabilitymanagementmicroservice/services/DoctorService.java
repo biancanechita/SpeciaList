@@ -19,6 +19,10 @@ public class DoctorService {
     private final DoctorRepository doctorRepository;
     private final DoctorMapper doctorMapper = Mappers.getMapper(DoctorMapper.class);
 
+    public long count() {
+        return doctorRepository.count();
+    }
+
     public List<DoctorDTO> findAll() {
         return doctorRepository
                 .findAll()
