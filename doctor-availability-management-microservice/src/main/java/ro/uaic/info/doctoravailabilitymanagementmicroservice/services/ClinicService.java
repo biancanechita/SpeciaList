@@ -31,6 +31,14 @@ public class ClinicService {
                 .collect(Collectors.toList());
     }
 
+    public List<ClinicDTO> findByCityId(Long cityId) {
+        return clinicRepository
+                .findByCityId(cityId)
+                .stream()
+                .map(clinicMapper::clinicToClinicDTO)
+                .collect(Collectors.toList());
+    }
+
     public ClinicDTO findById(Long id) {
         return clinicRepository
                 .findById(id)
