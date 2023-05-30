@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Service;
 import ro.uaic.info.doctoravailabilitymanagementmicroservice.beans.DoctorDTO;
+import ro.uaic.info.doctoravailabilitymanagementmicroservice.beans.QueryOptions;
 import ro.uaic.info.doctoravailabilitymanagementmicroservice.entities.Doctor;
 import ro.uaic.info.doctoravailabilitymanagementmicroservice.mappers.DoctorMapper;
 import ro.uaic.info.doctoravailabilitymanagementmicroservice.repositories.DoctorRepository;
@@ -21,6 +22,14 @@ public class DoctorService {
 
     public long count() {
         return doctorRepository.count();
+    }
+
+    public List<DoctorDTO> filterAndSortList(QueryOptions queryOptions) {
+        return doctorRepository
+                .filterAndSortList(queryOptions)
+                .stream()
+                .map(doctorMapper::doctorToDoctorDTO)
+                .collect(Collectors.toList());
     }
 
     public List<DoctorDTO> findAll() {

@@ -1,5 +1,5 @@
 <template>
-  <v-card variant="outlined" color="#734327">
+  <v-card variant="text" color="#734327" style="background-color: white">
     <div class="d-flex justify-space-between">
       <div class="d-flex justify-space-between align-center">
         <v-avatar class="ma-3" size="100">
@@ -65,6 +65,14 @@ export default {
             });
           }
         });
+    },
+  },
+  watch: {
+    doctor: {
+      handler() {
+        this.findById();
+      },
+      deep: true,
     },
   },
   created() {
