@@ -54,6 +54,11 @@ const routes = [
     ],
   },
   {
+    path: "/doctor-registration",
+    name: "DoctorRegistrationPage",
+    component: () => import("@/views/DoctorRegistration.vue"),
+  },
+  {
     path: "/:404(.*)",
     name: "NotFoundPage",
     component: () => import("@/views/NotFound.vue"),

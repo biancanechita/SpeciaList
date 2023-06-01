@@ -3,11 +3,13 @@ package ro.uaic.info.doctoravailabilitymanagementmicroservice.services;
 import lombok.RequiredArgsConstructor;
 import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Service;
+import ro.uaic.info.doctoravailabilitymanagementmicroservice.beans.QueryOptions;
 import ro.uaic.info.doctoravailabilitymanagementmicroservice.beans.SpecializationDTO;
 import ro.uaic.info.doctoravailabilitymanagementmicroservice.entities.Specialization;
 import ro.uaic.info.doctoravailabilitymanagementmicroservice.mappers.SpecializationMapper;
 import ro.uaic.info.doctoravailabilitymanagementmicroservice.repositories.SpecializationRepository;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -23,11 +25,20 @@ public class SpecializationService {
         return specializationRepository.count();
     }
 
+    public List<SpecializationDTO> filterAndSortList(QueryOptions queryOptions) {
+        return specializationRepository
+                .filterAndSortList(queryOptions)
+                .stream()
+                .map(specializationMapper::specializationToSpecializationDTO)
+                .collect(Collectors.toList());
+    }
+
     public List<SpecializationDTO> findAll() {
         return specializationRepository
                 .findAll()
                 .stream()
                 .map(specializationMapper::specializationToSpecializationDTO)
+                .sorted(Comparator.comparing(SpecializationDTO::getName))
                 .collect(Collectors.toList());
     }
 

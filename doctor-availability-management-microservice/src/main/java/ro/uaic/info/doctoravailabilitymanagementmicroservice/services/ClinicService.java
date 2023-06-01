@@ -4,10 +4,12 @@ import lombok.RequiredArgsConstructor;
 import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Service;
 import ro.uaic.info.doctoravailabilitymanagementmicroservice.beans.ClinicDTO;
+import ro.uaic.info.doctoravailabilitymanagementmicroservice.beans.QueryOptions;
 import ro.uaic.info.doctoravailabilitymanagementmicroservice.entities.Clinic;
 import ro.uaic.info.doctoravailabilitymanagementmicroservice.mappers.ClinicMapper;
 import ro.uaic.info.doctoravailabilitymanagementmicroservice.repositories.ClinicRepository;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -23,11 +25,20 @@ public class ClinicService {
         return clinicRepository.count();
     }
 
+    public List<ClinicDTO> filterAndSortList(QueryOptions queryOptions) {
+        return clinicRepository
+                .filterAndSortList(queryOptions)
+                .stream()
+                .map(clinicMapper::clinicToClinicDTO)
+                .collect(Collectors.toList());
+    }
+
     public List<ClinicDTO> findAll() {
         return clinicRepository
                 .findAll()
                 .stream()
                 .map(clinicMapper::clinicToClinicDTO)
+                .sorted(Comparator.comparing(ClinicDTO::getName))
                 .collect(Collectors.toList());
     }
 
