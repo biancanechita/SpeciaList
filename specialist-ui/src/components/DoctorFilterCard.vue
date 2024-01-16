@@ -1,140 +1,257 @@
 <template>
-  <v-card elevation="0">
-    <v-card-actions class="py-0">
+  <v-card variant="plain">
+    <v-card-actions>
       <v-select
-        v-model="specialization"
+        v-model="specializationId"
         label="Specialitate"
         :items="specializations"
-        variant="plain"
-        hide-details="true"
-        style="padding: 12px 24px 0"
-      ></v-select>
-      <v-divider vertical></v-divider>
+        item-title="specialization"
+        item-value="id"
+        variant="solo-filled"
+        color="#e80054"
+        :flat="true"
+        :hide-details="true"
+        style="padding: 12px 24px; width: min-content"
+      >
+        <template v-slot:prepend-item>
+          <v-text-field
+            v-model="specialization"
+            label="Cauta"
+            append-inner-icon="mdi-magnify"
+            variant="outlined"
+            color="#e80054"
+            :hide-details="true"
+            style="padding: 12px 24px 0"
+          ></v-text-field>
+
+          <v-divider class="mt-2"></v-divider>
+        </template>
+      </v-select>
 
       <v-select
-        v-model="city"
+        v-model="selectedCity"
         label="Locatie"
-        :items="cities"
-        variant="plain"
-        hide-details="true"
-        style="padding: 12px 24px 0"
+        :items="cityClinicsCollection"
+        item-title="city"
+        item-value="id"
+        return-object
+        variant="solo-filled"
+        color="#e80054"
+        :flat="true"
+        :hide-details="true"
+        style="padding: 12px 24px; width: min-content"
+      >
+      </v-select>
+
+      <v-select
+        v-model="sortId"
+        label="Ordonare"
+        :items="sortingOptions"
+        item-title="name"
+        item-value="id"
+        variant="solo-filled"
+        color="#e80054"
+        :flat="true"
+        :hide-details="true"
+        style="padding: 12px 24px; width: min-content"
       ></v-select>
-      <v-divider vertical></v-divider>
 
       <v-text-field
+        :focused="true"
+        label="Cauta"
         v-model="fullName"
-        label="Nume"
         append-inner-icon="mdi-magnify"
-        variant="plain"
-        hide-details="true"
-        style="padding: 12px 24px 0"
+        variant="outlined"
+        color="#e80054"
+        :hide-details="true"
+        style="padding: 12px 24px"
       ></v-text-field>
-      <v-divider vertical></v-divider>
-
-      <v-select
-        v-model="sort"
-        label="Ordonare"
-        :items="[
-          'Prestabilit',
-          'In ordine alfabetică',
-          'De la cei mai buni doctori',
-        ]"
-        variant="plain"
-        hide-details="true"
-        style="padding: 12px 24px 0"
-      ></v-select>
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
 import { citiesService } from "@/services/citiesService";
+import { clinicsService } from "@/services/clinicsService";
 import { specializationService } from "@/services/specializationService";
 
 export default {
   data() {
     return {
-      cities: [],
+      cityClinicsCollection: [],
       specializations: [],
+      sortingOptions: [
+        { id: "", name: "Ordonare" },
+        { id: 1, name: "In ordine alfabetică" },
+        { id: 2, name: "De la cei mai buni doctori" },
+      ],
 
-      city: "Toate",
+      selectedCity: { id: "", city: "Toate" },
       fullName: "",
-      sort: "Ordonare",
-      specialization: "Toate",
+      sortId: "",
 
-      queryOptions: {
-        filters: {
-          city: "",
-          fullName: "",
-          specialization: "",
-        },
-        sortingList: [],
-      },
+      cityId: "",
+      clinicId: "",
+      specializationId: null,
+
+      specialization: "",
+
+      sortingList: [],
+
+      disableWatcher: true,
     };
   },
+  props: ["autocomplete"],
   methods: {
-    findAllCities() {
-      citiesService.findAll().then((response) => {
+    async findAllCities() {
+      const queryOptions = { filters: {}, sortingList: [] };
+      const response = await citiesService.filterAndSortList(queryOptions);
+      if (response.ok) {
+        const text = await response.text();
+        if (text) {
+          const items = JSON.parse(text);
+
+          for (const item of items) {
+            const queryOptions = {
+              filters: {
+                cityId: item.id,
+              },
+              sortingList: [],
+            };
+
+            this.cityClinicsCollection.push({
+              id: item.id,
+              city: item.city,
+            });
+
+            await this.findAllClinics(queryOptions);
+          }
+
+          this.cityClinicsCollection.unshift({ id: "", city: "Toate" });
+          console.log(this.cityClinicsCollection);
+        }
+      }
+    },
+    async findAllClinics(queryOptions) {
+      const response = await clinicsService.filterAndSortList(queryOptions);
+      if (response.ok) {
+        const text = await response.text();
+        if (text) {
+          const items = JSON.parse(text);
+
+          for (const item of items) {
+            this.cityClinicsCollection.push({
+              id: item.id,
+              city: item.clinic,
+              cityId: item.cityId,
+            });
+          }
+        }
+      }
+    },
+    findAllSpecializations() {
+      const queryOptions = {
+        filters: {
+          specialization: this.specialization,
+        },
+        sortingList: [],
+      };
+
+      specializationService.filterAndSortList(queryOptions).then((response) => {
         if (response.ok) {
-          response.text().then((text) => {
-            if (text) {
-              text = JSON.parse(text);
-              text.forEach((item) => {
-                this.cities.push(item.name);
-              });
-            }
-          });
+          response
+            .text()
+            .then((text) => {
+              if (text) {
+                this.specializations = JSON.parse(text);
+              }
+            })
+            .then(() => {
+              this.specializations.unshift({ id: "", specialization: "Toate" });
+            });
         }
       });
     },
-    findAllSpecializations() {
-      specializationService.findAll().then((response) => {
-        if (response.ok) {
-          response.text().then((text) => {
-            if (text) {
-              text = JSON.parse(text);
-              text.forEach((item) => {
-                this.specializations.push(item.name);
-              });
-            }
-          });
-        }
-      });
+    handleFilterUpdate() {
+      const filterOptions = {
+        filters: {
+          specializationId: this.specializationId,
+          fullName: this.fullName,
+          cityId: this.cityId,
+          clinicId: this.clinicId,
+        },
+        sortingList: this.sortingList,
+      };
+
+      this.$emit("filter-updated", filterOptions);
     },
   },
   watch: {
-    city() {
-      this.queryOptions.filters.city = this.city;
+    specializationId: "handleFilterUpdate",
+    selectedCity() {
+      if (this.selectedCity.cityId) {
+        this.clinicId = this.selectedCity.id;
+        this.cityId = "";
+      } else {
+        this.clinicId = "";
+        this.cityId = this.selectedCity.id;
+      }
+
+      this.handleFilterUpdate();
     },
-    fullName() {
-      this.queryOptions.filters.fullName = this.fullName;
-    },
-    specialization() {
-      this.queryOptions.filters.specialization = this.specialization;
-    },
-    sort() {
-      if (this.sort === "In ordine alfabetică") {
-        this.queryOptions.sortingList = [
+    fullName: "handleFilterUpdate",
+    sortId() {
+      if (this.sortId === "") {
+        this.sortingList = [];
+      } else if (this.sortId === 1) {
+        this.sortingList = [
           { column: "firstName", order: "ASC" },
           { column: "lastName", order: "ASC" },
         ];
-      } else if (this.sort === "De la cei mai buni doctori") {
-        this.queryOptions.sortingList = [
-          { column: "averageRating", order: "DESC" },
-        ];
+      } else if (this.sortId === 2) {
+        this.sortingList = [{ column: "averageRating", order: "DESC" }];
       }
+
+      this.handleFilterUpdate();
     },
-    queryOptions: {
-      handler() {
-        this.$emit("queryOptions", this.queryOptions);
-      },
-      deep: true,
+    specialization() {
+      this.findAllSpecializations();
     },
   },
-  emits: ["queryOptions"],
+  emits: ["filter-updated"],
   created() {
     this.findAllCities();
     this.findAllSpecializations();
+
+    if (this.autocomplete.filters.clinicId !== "") {
+      clinicsService
+        .findById(this.autocomplete.filters.clinicId)
+        .then((response) => {
+          if (response.ok) {
+            response.text().then((text) => {
+              if (text) {
+                const item = JSON.parse(text);
+
+                this.selectedCity = {
+                  id: item.id,
+                  city: item.clinic,
+                  cityId: item.cityId,
+                };
+              }
+            });
+          }
+        });
+    }
+
+    this.specializationId = this.autocomplete.filters.specializationId;
   },
 };
 </script>
+
+<style>
+.v-select__selection-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+</style>

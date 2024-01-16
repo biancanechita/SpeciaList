@@ -4,7 +4,7 @@ export const specializationService = {
   findById,
 };
 
-const url = "http://localhost:8080/specializations";
+const url = "http://localhost:8089/specializations";
 
 function filterAndSortList(queryOptions) {
   const requestOptions = {

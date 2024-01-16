@@ -1,75 +1,81 @@
 <template>
   <v-container class="fill-height">
-    <v-responsive class="d-flex align-center text-center fill-height">
-      <v-img height="300" src="@/assets/logo.svg" />
-
-      <div class="text-body-2 font-weight-light mb-n1">Welcome to</div>
-
-      <h1 class="text-h2 font-weight-bold">Vuetify</h1>
-
-      <div class="py-14" />
-
-      <v-row class="d-flex align-center justify-center">
-        <v-col cols="auto">
-          <v-btn
-            href="https://vuetifyjs.com/components/all/"
-            min-width="164"
-            rel="noopener noreferrer"
-            target="_blank"
-            variant="text"
-          >
-            <v-icon
-              icon="mdi-view-dashboard"
-              size="large"
-              start
-            />
-
-            Components
-          </v-btn>
-        </v-col>
-
-        <v-col cols="auto">
-          <v-btn
-            color="primary"
-            href="https://vuetifyjs.com/introduction/why-vuetify/#feature-guides"
-            min-width="228"
-            rel="noopener noreferrer"
-            size="x-large"
-            target="_blank"
-            variant="flat"
-          >
-            <v-icon
-              icon="mdi-speedometer"
-              size="large"
-              start
-            />
-
-            Get Started
-          </v-btn>
-        </v-col>
-
-        <v-col cols="auto">
-          <v-btn
-            href="https://community.vuetifyjs.com/"
-            min-width="164"
-            rel="noopener noreferrer"
-            target="_blank"
-            variant="text"
-          >
-            <v-icon
-              icon="mdi-account-group"
-              size="large"
-              start
-            />
-
-            Community
-          </v-btn>
-        </v-col>
+    <v-row style="padding: 48px 32px; height: 100%">
+      <v-row justify="end">
+        <v-avatar image="@/assets/doctor.png" size="180"></v-avatar>
+        <h1
+          class="font-weight-bold"
+          style="
+            text-align: start;
+            font-size: 76px;
+            line-height: 1.25;
+            font-weight: 900;
+            letter-spacing: -1.5px;
+            color: #213547;
+          "
+        >
+          Platforma pentru Sănătate și Binele Tău
+        </h1>
       </v-row>
-    </v-responsive>
+
+      <v-row
+        align="start"
+        class="font-weight-light"
+        style="font-size: 22px; padding: 24px 40px; text-align: center"
+      >
+        <v-row
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <v-btn color="#213547" size="large" variant="text" :disabled="true">
+            Explorează serviciile noastre
+          </v-btn>
+          <v-btn
+            color="#e80054"
+            @click="
+              () => {
+                this.$router.push({ name: 'LoginPage' });
+              }
+            "
+            size="large"
+            variant="flat"
+            theme="dark"
+            prepend-icon="mdi-login-variant"
+            v-if="!login"
+          >
+            Autentificare
+          </v-btn>
+        </v-row>
+
+        <v-row align="end">
+          O platformă online cuprinzătoare pentru căutarea de medici și
+          programarea de consultații în cadrul unei rețele medicale la nivel
+          național
+        </v-row>
+      </v-row>
+    </v-row>
   </v-container>
 </template>
 
-<script setup>
-  //
+<script>
+export default {
+  data() {
+    return {
+      login: false,
+    };
+  },
+  computed: {
+    token() {
+      return this.$store.getters.getToken;
+    },
+  },
+  watch: {
+    token(newToken) {
+      console.log("Token has changed:", newToken);
+      this.login = !!newToken;
+    },
+  },
+  created() {
+    this.login = !!sessionStorage.getItem("Token");
+  },
+};
 </script>

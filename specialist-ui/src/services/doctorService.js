@@ -1,10 +1,12 @@
 export const doctorService = {
   filterAndSortList,
   findAll,
+  findById,
   save,
+  getFullName,
 };
 
-const url = "http://localhost:8080/doctors";
+const url = "http://localhost:8089/doctors";
 
 function filterAndSortList(queryOptions) {
   const requestOptions = {
@@ -22,6 +24,13 @@ function findAll() {
   return fetch(url, requestOptions);
 }
 
+function findById(id) {
+  const requestOptions = {
+    method: "GET",
+  };
+  return fetch(url + "/" + id, requestOptions);
+}
+
 function save(doctor) {
   const requestOptions = {
     method: "POST",
@@ -29,4 +38,11 @@ function save(doctor) {
     body: JSON.stringify(doctor),
   };
   return fetch(url, requestOptions);
+}
+
+function getFullName(id) {
+  const requestOptions = {
+    method: "GET",
+  };
+  return fetch(url + "/" + id + "/get-full-name", requestOptions);
 }

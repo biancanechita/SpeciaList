@@ -2,9 +2,10 @@ export const clinicsService = {
   filterAndSortList,
   findAll,
   findByCityId,
+  findById,
 };
 
-const url = "http://localhost:8080/clinics";
+const url = "http://localhost:8089/clinics";
 
 function filterAndSortList(queryOptions) {
   const requestOptions = {
@@ -27,4 +28,11 @@ function findByCityId(cityId) {
     method: "GET",
   };
   return fetch(url + "/city/" + cityId, requestOptions);
+}
+
+function findById(id) {
+  const requestOptions = {
+    method: "GET",
+  };
+  return fetch(url + "/" + id, requestOptions);
 }

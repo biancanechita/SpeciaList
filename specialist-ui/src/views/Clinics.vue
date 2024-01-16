@@ -1,71 +1,75 @@
 <template>
-  <div class="d-flex flex-column align-center">
-    <v-list lines="one" style="background-color: #f7f7f7">
-      <v-list-item v-for="(item, index) in clinics" :key="index">
-        <div class="d-flex flex-column">
-          <span class="text-center text-h5">{{ item.city.name }}</span>
-          <v-list lines="one" style="background-color: #f7f7f7">
-            <v-list-item
-              v-for="(item, index) in item.clinics"
-              :key="index"
-              style="background-color: #f7f7f7"
-            >
-              <ClinicCard :clinic="item"></ClinicCard>
-            </v-list-item>
-          </v-list>
-        </div>
+  <v-container>
+    <ClinicFilterCard
+      :autocomplete="queryOptions"
+      @filter-updated="handleFilterUpdate"
+      class="mb-9"
+    ></ClinicFilterCard>
+    <v-list
+      style="display: flex; flex-wrap: wrap; justify-content: space-around"
+    >
+      <v-list-item
+        v-for="(item, index) in items"
+        :key="index"
+        class="card-hover"
+      >
+        <ClinicCard :clinic="item"></ClinicCard>
       </v-list-item>
     </v-list>
-  </div>
+  </v-container>
 </template>
 
 <script>
-import { citiesService } from "@/services/citiesService";
-import { clinicsService } from "@/services/clinicsService";
+import ClinicFilterCard from "@/components/ClinicFilterCard.vue";
+import CityClinicsCard from "@/components/CityClinicsCard.vue";
 import ClinicCard from "@/components/ClinicCard.vue";
+import { clinicsService } from "@/services/clinicsService";
 
 export default {
   data() {
     return {
-      clinics: [],
+      items: [],
+      queryOptions: {
+        filters: {
+          cityId: "",
+          specializationId: "",
+        },
+        sortingList: [],
+      },
     };
   },
   methods: {
-    findAllCities() {
-      citiesService.findAll().then((response) => {
-        if (response.ok) {
-          response.text().then((text) => {
-            if (text) {
-              this.findAllClinics(JSON.parse(text));
-            }
-          });
-        }
-      });
-    },
-    findAllClinics(cities) {
-      cities.forEach((city) => {
-        clinicsService.findByCityId(city.id).then((response) => {
+    handleFilterUpdate(updatedFilterOptions) {
+      clinicsService
+        .filterAndSortList(updatedFilterOptions)
+        .then((response) => {
           if (response.ok) {
-            response.text().then((text) => {
-              if (text) {
-                const clinics = JSON.parse(text);
-
-                if (clinics.length > 0) {
-                  this.clinics.push({
-                    city: city,
-                    clinics: clinics,
-                  });
+            response
+              .text()
+              .then((text) => {
+                if (text) {
+                  this.items = JSON.parse(text);
+                  console.log(updatedFilterOptions);
+                  console.log(this.items);
                 }
-              }
-            });
+              })
+              .then(() => {
+                this.queryOptions = updatedFilterOptions;
+              });
           }
         });
-      });
     },
   },
-  created() {
-    this.findAllCities();
-  },
-  components: { ClinicCard },
+  components: { CityClinicsCard, ClinicFilterCard, ClinicCard },
 };
 </script>
+
+<style scoped>
+.card-hover {
+  /* padding: 24px 28px;
+  border-radius: 4px;
+  box-shadow: 0 12px 12px #0000000d; */
+  width: 48.5%;
+  margin-bottom: 36px;
+}
+</style>

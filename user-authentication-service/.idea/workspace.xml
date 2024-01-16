@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e7e84c4d-1c8e-4c0d-a0de-1c53f0a79922" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/ApiGatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/QueryOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/SortExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/clients/AbstractRestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/clients/AppointmentSchedulingServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/clients/MedicalInventoryServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/clients/RestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/clients/UserAuthenticationServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/clients/UserNotificationServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/config/JwtTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/config/UserPrincipal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/controllers/AbstractController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/controllers/AppointmentSchedulingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/controllers/CityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/controllers/ClinicController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/controllers/DoctorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/controllers/DoctorInvestigationExpenseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/controllers/MedicalInvestigationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/controllers/SpecializationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/controllers/UserAuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/services/AbstractService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/services/AppointmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/services/CityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/services/ClinicService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/services/DoctorInvestigationExpenseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/services/DoctorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/services/MedicalInvestigationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/services/PatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/services/SpecializationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/services/UserAuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/services/UserNotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/java/ro/uaic/info/apigateway/services/impl/AbstractServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-Gateway/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service-api/src/main/java/ro/uaic/info/appointmentschedulingservice/AppointmentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service-api/src/main/java/ro/uaic/info/appointmentschedulingservice/AppointmentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service-api/src/main/java/ro/uaic/info/appointmentschedulingservice/AvailableTimes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service-api/src/main/java/ro/uaic/info/appointmentschedulingservice/DoctorInvestigationExpenseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service-api/src/main/java/ro/uaic/info/appointmentschedulingservice/MedicalInvestigationDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service-api/src/main/java/ro/uaic/info/appointmentschedulingservice/SchedulingParameters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_buffer_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_codec_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_common_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_handler_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_resolver_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_resolver_dns_classes_macos_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_resolver_dns_native_macos_osx_x86_64_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_transport_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_transport_classes_epoll_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_core_1_0_32.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_http_1_0_32.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__net_minidev_json_smart_2_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_75.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_75.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_75.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_assertj_assertj_core_3_22_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_dom4j_dom4j_2_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_15_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_hibernate_hibernate_envers_5_6_15_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_liquibase_liquibase_core_4_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_mapstruct_mapstruct_1_5_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_mockito_mockito_core_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_ow2_asm_asm_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_postgresql_postgresql_42_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_projectlombok_lombok_1_18_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_spring_aop_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_spring_aspects_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_spring_beans_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_spring_context_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_spring_core_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_spring_expression_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_spring_orm_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_spring_test_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_spring_tx_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_spring_web_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_spring_webflux_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__org_yaml_snakeyaml_1_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/libraries/Maven__ro_uaic_info_appointment_scheduling_service_api_1_0_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/AppointmentSchedulingServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/beans/AvailableTimes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/beans/QueryOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/beans/SchedulingParameters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/beans/SensitivePersonalData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/beans/SortExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/clients/MedicalInventoryServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/clients/RestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/config/JwtTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/config/PersistenceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/config/UserPrincipal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/controllers/AppointmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/controllers/PatientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/entities/Appointment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/entities/AppointmentReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/entities/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/entities/Patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/mappers/AppointmentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/mappers/AppointmentRequestMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/repositories/AppointmentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/repositories/AppointmentRequestRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/repositories/PatientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/services/AppointmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/java/ro/uaic/info/appointmentschedulingservice/services/PatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/resources/db/changelog/db.changelog-1.0.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../appointment-scheduling-service/src/main/resources/db/changelog/db.changelog-root.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__com_github_javafaker_javafaker_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__com_github_mifmif_generex_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__dk_brics_automaton_automaton_1_11_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__io_micrometer_micrometer_core_1_9_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__io_netty_netty_buffer_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__io_netty_netty_codec_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__io_netty_netty_common_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__io_netty_netty_handler_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__io_netty_netty_resolver_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__io_netty_netty_resolver_dns_native_macos_osx_x86_64_4_1_59_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__io_netty_netty_transport_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__net_minidev_json_smart_2_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_75.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_75.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_75.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_assertj_assertj_core_3_22_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_15_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_liquibase_liquibase_core_4_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_mapstruct_mapstruct_1_5_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_mockito_mockito_core_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_ow2_asm_asm_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_postgresql_postgresql_42_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_projectlombok_lombok_1_18_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_spring_aop_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_spring_aspects_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_spring_beans_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_spring_context_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_spring_core_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_spring_expression_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_spring_orm_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_spring_test_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_spring_tx_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_spring_web_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_yaml_snakeyaml_1_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/libraries/Maven__org_yaml_snakeyaml_android_1_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/DoctorAvailabilityManagementMicroserviceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/beans/CityDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/beans/ClinicDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/beans/DoctorDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/beans/DoctorInvestigationExpenseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/beans/MedicalInvestigationDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/beans/QueryOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/beans/SortExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/beans/SpecializationDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/config/JwtTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/config/UserPrincipal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/controllers/CityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/controllers/ClinicController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/controllers/DoctorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/controllers/DoctorInvestigationExpenseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/controllers/MedicalInvestigationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/controllers/SpecializationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/entities/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/entities/Clinic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/entities/ClinicSpecialization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/entities/Doctor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/entities/DoctorInvestigationExpense.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/entities/MedicalInvestigation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/entities/Specialization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/mappers/CityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/mappers/ClinicMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/mappers/DoctorInvestigationExpenseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/mappers/DoctorMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/mappers/MedicalInvestigationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/mappers/SpecializationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/CityCustomRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/CityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/ClinicCustomRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/ClinicRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/ClinicSpecializationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/DoctorCustomRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/DoctorInvestigationExpenseCustomRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/DoctorInvestigationExpenseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/DoctorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/FilterAndSortUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/MedicalInvestigationCustomRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/MedicalInvestigationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/SpecializationCustomRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/SpecializationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/impl/AbstractFilterAndSortUtilsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/impl/CityCustomRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/impl/ClinicCustomRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/impl/DoctorCustomRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/impl/DoctorInvestigationExpenseCustomRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/impl/MedicalInvestigationCustomRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/impl/SpecializationCustomRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/services/CityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/services/ClinicService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/services/ClinicSpecializationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/services/DoctorInvestigationExpenseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/services/DoctorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/services/MedicalInvestigationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/services/SpecializationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/resources/db/changelog/db.changelog-1.0.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/resources/db/changelog/db.changelog-data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical-inventory-service/src/main/resources/db/changelog/db.changelog-root.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-authentication-service-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-authentication-service-api/src/main/java/ro/uaic/info/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-authentication-service-api/src/main/java/ro/uaic/info/userauthenticationserviceapi/SensitivePersonalData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-authentication-service-api/src/main/java/ro/uaic/info/userauthenticationserviceapi/UserCredentials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-authentication-service-api/src/main/java/ro/uaic/info/userauthenticationserviceapi/UserRegistrationData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_75.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_75.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_75.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_22_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_15_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_envers_5_6_15_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_liquibase_liquibase_core_4_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_5_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_7_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ro_uaic_info_user_authentication_service_api_1_0_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/uaic/info/userauthenticationservice/UserAuthenticationServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/uaic/info/userauthenticationservice/config/JwtGeneratorInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/uaic/info/userauthenticationservice/config/JwtGeneratorInterfaceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/uaic/info/userauthenticationservice/config/JwtTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/uaic/info/userauthenticationservice/config/PersistenceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/uaic/info/userauthenticationservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/uaic/info/userauthenticationservice/config/UserPrincipal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/uaic/info/userauthenticationservice/controllers/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/uaic/info/userauthenticationservice/entities/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/uaic/info/userauthenticationservice/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/uaic/info/userauthenticationservice/entities/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/uaic/info/userauthenticationservice/exceptions/UserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/uaic/info/userauthenticationservice/repositories/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/uaic/info/userauthenticationservice/services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-1.0.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-root.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_6_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__com_twilio_sdk_twilio_9_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__commons_io_commons_io_2_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__io_jsonwebtoken_jjwt_api_0_11_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__io_jsonwebtoken_jjwt_impl_0_11_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__io_jsonwebtoken_jjwt_jackson_0_11_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__net_minidev_json_smart_2_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_75.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_75.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_75.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_assertj_assertj_core_3_22_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_4_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_json_json_20220320.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_mockito_mockito_core_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_ow2_asm_asm_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_projectlombok_lombok_1_18_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_spring_aop_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_spring_beans_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_spring_context_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_spring_core_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_spring_expression_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_spring_test_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_spring_web_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/libraries/Maven__org_yaml_snakeyaml_1_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/src/main/java/ro/uaic/info/usernotificationservice/UserNotificationServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/src/main/java/ro/uaic/info/usernotificationservice/beans/Notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/src/main/java/ro/uaic/info/usernotificationservice/beans/NotificationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/src/main/java/ro/uaic/info/usernotificationservice/clients/TwilioClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/src/main/java/ro/uaic/info/usernotificationservice/controllers/NotificationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/src/main/java/ro/uaic/info/usernotificationservice/services/NotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user-notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/DoctorAvailabilityManagementMicroserviceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/beans/CityDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/beans/ClinicDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/beans/DoctorDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/beans/QueryOptions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/beans/SortExpression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/beans/SpecializationDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/config/DatabaseInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/controllers/CityController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/controllers/ClinicController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/controllers/DoctorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/controllers/SpecializationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/entities/City.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/entities/Clinic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/entities/Doctor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/entities/Specialization.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/mappers/CityMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/mappers/ClinicMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/mappers/DoctorMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/mappers/SpecializationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/CityRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/ClinicCustomRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/ClinicRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/DoctorCustomRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/DoctorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/FilterAndSortUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/SpecializationCustomRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/SpecializationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/impl/AbstractFilterAndSortUtilsImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/impl/ClinicCustomRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/impl/DoctorCustomRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/repositories/impl/SpecializationCustomRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/services/CityService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/services/ClinicService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/services/DoctorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/services/SpecializationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/resources/db/changelog/db.changelog-1.0.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/main/resources/db/changelog/db.changelog-root.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor-availability-management-microservice/src/test/java/ro/uaic/info/doctoravailabilitymanagementmicroservice/DoctorAvailabilityManagementMicroserviceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/components/ClinicCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/components/ClinicCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/components/DoctorCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/components/DoctorCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/components/DoctorFilterCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/components/DoctorFilterCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/components/DoctorRegistrationForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/components/DoctorRegistrationForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/components/HelloWorld.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/components/SpecializationCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/components/SpecializationCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/layouts/default/AppBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/layouts/default/AppBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/layouts/default/Default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/layouts/default/Default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/layouts/default/View.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/layouts/default/View.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/plugins/vuetify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/services/citiesService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/services/citiesService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/services/clinicsService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/services/clinicsService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/services/doctorService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/services/doctorService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/services/specializationService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/services/specializationService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/views/Clinics.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/views/Clinics.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/views/Doctors.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/views/Doctors.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/views/NotFound.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/views/NotFound.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../specialist-ui/src/views/Specializations.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../specialist-ui/src/views/Specializations.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2R9iOe8dogGPtU7eC9DfKkdflsQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelOrder2&quot;: &quot;2&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth2&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/biancanechita/Code Cabinet/SpeciaList/user-authentication-service/src/main/resources/db/changelog&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;dabe6cf741330e1e4af70353f8a70ada&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ro.uaic.info.userauthenticationservice.config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/db/changelog" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.UserAuthenticationServiceApplication">
+    <configuration name="UserAuthenticationServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-authentication-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ro.uaic.info.userauthenticationservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ro.uaic.info.userauthenticationservice" />
+      <option name="MAIN_CLASS_NAME" value="ro.uaic.info.userauthenticationservice.UserAuthenticationServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserAuthenticationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="user-authentication-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ro.uaic.info.userauthenticationservice.UserAuthenticationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.UserAuthenticationServiceApplication" />
+        <item itemvalue="JUnit.UserAuthenticationServiceApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e7e84c4d-1c8e-4c0d-a0de-1c53f0a79922" name="Changes" comment="" />
+      <created>1686668666987</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686668666987</updated>
+      <workItem from="1686668668540" duration="15642000" />
+      <workItem from="1686819471237" duration="412000" />
+      <workItem from="1686819921579" duration="21000" />
+      <workItem from="1686820016160" duration="6536000" />
+      <workItem from="1687023372266" duration="1200000" />
+      <workItem from="1687176604842" duration="598000" />
+      <workItem from="1687189058487" duration="14160000" />
+      <workItem from="1687353179537" duration="649000" />
+      <workItem from="1687377928705" duration="7719000" />
+      <workItem from="1687861445321" duration="721000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

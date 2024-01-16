@@ -1,0 +1,6 @@
+ro/uaic/info/appointmentschedulingservice/AppointmentRequest.class
+ro/uaic/info/appointmentschedulingservice/AvailableTimes.class
+ro/uaic/info/appointmentschedulingservice/MedicalInvestigationDto.class
+ro/uaic/info/appointmentschedulingservice/SchedulingParameters.class
+ro/uaic/info/appointmentschedulingservice/AppointmentDto.class
+ro/uaic/info/appointmentschedulingservice/DoctorInvestigationExpenseDto.class

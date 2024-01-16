@@ -1,55 +1,20 @@
 <template>
   <v-card
-    variant="text"
-    style="background-color: white; padding: 16px"
-    width="912"
+    style="padding: 24px 28px; border: 1px solid rgba(60, 60, 60, 0.12)"
+    elevation="0"
   >
-    <div class="d-inline-flex" style="width: 100%">
-      <div class="d-flex align-center" style="width: 100%">
-        <v-avatar class="ma-3" size="60">
-          <v-img
-            src="https://cdn-icons-png.flaticon.com/512/249/249217.png"
-          ></v-img>
-        </v-avatar>
-        <div style="width: 100%">
-          <v-card-title>{{ specialization.name }}</v-card-title>
-
-          <v-expand-transition>
-            <div v-show="show" style="padding-top: 18px">
-              <div style="padding: 20.4px 0">
-                <a
-                  href=""
-                  class="text-decoration-none text-subtitle-1"
-                  style="padding: 0.5rem 1rem; color: #ff314f"
-                  >Vezi medici</a
-                >
-              </div>
-
-              <v-divider></v-divider>
-
-              <div style="padding: 20.4px 0">
-                <a
-                  href=""
-                  class="text-decoration-none text-subtitle-1"
-                  style="padding: 0.5rem 1rem; color: #ff314f"
-                  >Vezi investigatii</a
-                >
-              </div>
-            </div>
-          </v-expand-transition>
-        </div>
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-card-actions>
-        <v-btn
-          :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
-          elevation="0"
-          @click="show = !show"
-        ></v-btn>
-      </v-card-actions>
-    </div>
+    <v-card-title class="title-hover">{{
+      specialization.specialization
+    }}</v-card-title>
+    <v-card-text>{{ specialization.description }} </v-card-text>
+    <v-card-actions>
+      <v-btn color="#e80054" variant="flat" theme="dark" @click="ceva"
+        >Vezi medici</v-btn
+      >
+      <v-btn color="#f1f1f1" variant="flat" @click="ceva2"
+        >Vezi investigatii</v-btn
+      >
+    </v-card-actions>
   </v-card>
 </template>
 
@@ -58,6 +23,45 @@ export default {
   data() {
     return { show: false };
   },
-  props: ["specialization"],
+  props: ["specialization", "index"],
+  computed: {
+    header() {
+      return this.index + 1;
+    },
+  },
+  methods: {
+    ceva() {
+      this.$store.state.queryOptions = {
+        filters: {
+          cityId: "",
+          clinicId: this.$store.state.queryOptions.filters.clinicId,
+          fullName: "",
+          specializationId: this.specialization.id,
+        },
+        sortingList: [],
+      };
+
+      this.$router.push({
+        name: "Doctors",
+      });
+    },
+    ceva2() {
+      console.log(this.$store.state.queryOptions.filters.clinicId);
+
+      this.$store.state.queryOptionsInvestigations = {
+        filters: {
+          id: this.specialization.id,
+          clinicId: this.$store.state.queryOptions.filters.clinicId,
+        },
+        sortingList: [],
+      };
+
+      console.log(this.$store.state.queryOptionsInvestigations);
+
+      this.$router.push({
+        name: "MedicalInvestigations",
+      });
+    },
+  },
 };
 </script>

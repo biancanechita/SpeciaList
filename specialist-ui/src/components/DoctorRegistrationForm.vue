@@ -17,7 +17,7 @@
       :rules="rules"
       label="Specialitate"
       :items="specializations"
-      item-title="name"
+      item-title="specialization"
       item-value="id"
     >
       <template v-slot:prepend-item>
@@ -44,7 +44,7 @@
       :rules="rules"
       label="Locatie"
       :items="clinics"
-      item-title="name"
+      item-title="clinic"
       item-value="id"
     >
       <template v-slot:prepend-item>
@@ -90,7 +90,9 @@ export default {
   },
   methods: {
     findAll() {
-      clinicsService.findAll().then((response) => {
+      const queryOptions = { filters: {}, sortingList: [] };
+
+      clinicsService.filterAndSortList(queryOptions).then((response) => {
         if (response.ok) {
           response.text().then((text) => {
             if (text) {
@@ -100,7 +102,7 @@ export default {
         }
       });
 
-      specializationService.findAll().then((response) => {
+      specializationService.filterAndSortList(queryOptions).then((response) => {
         if (response.ok) {
           response.text().then((text) => {
             if (text) {

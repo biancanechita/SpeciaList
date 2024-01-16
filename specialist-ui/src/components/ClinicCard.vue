@@ -1,70 +1,69 @@
 <template>
   <v-card
-    variant="text"
-    style="background-color: white"
-    width="912"
-    class="d-inline-flex pa-4"
+    style="padding: 24px 28px; border: 1px solid rgba(60, 60, 60, 0.12)"
+    elevation="0"
   >
-    <div class="d-inline-flex" style="width: 100%">
-      <div class="d-flex align-center">
-        <v-avatar class="ma-3" size="60">
-          <v-img
-            src="https://cdn-icons-png.flaticon.com/512/507/507597.png"
-          ></v-img>
-        </v-avatar>
-        <div style="width: 400px">
-          <v-card-title>{{ clinic.name }}</v-card-title>
-
-          <v-expand-transition>
-            <div v-show="show">
-              <v-card-text>
-                Pacientii au acces la peste 30 de cabinete in regim ambulatoriu
-                si 30 de specialitati medicale si echipe medici cu experienta in
-                diagnosticarea, tratarea si urmarirea pacientilor cu afectiuni
-                acute sau cronice.
-              </v-card-text>
-              <v-card-actions style="padding: 0 1rem">
-                <v-btn variant="outlined" color="#FFAA20">Vezi detalii</v-btn>
-                <v-btn variant="outlined" color="#FFAA20">Vezi pe harta</v-btn>
-              </v-card-actions>
-            </div>
-          </v-expand-transition>
-        </div>
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <div class="d-flex flex-column justify-center align-start px-5">
-        <span class="text-caption font-weight-bold"
-          >Adresa
-          <span class="font-weight-regular"> {{ clinic.address }}</span>
-        </span>
-        <span class="text-caption font-weight-bold"
-          >Telefon
-          <span class="font-weight-regular">
-            {{ clinic.contactInformation }}</span
-          >
-        </span>
-      </div>
-    </div>
-
-    <v-spacer></v-spacer>
-
+    <v-card-title class="title-hover">{{ clinic.clinic }}</v-card-title>
+    <v-card-subtitle>{{ clinicCity }}</v-card-subtitle>
+    <v-card-text
+      >Pacientii au acces la peste 30 de cabinete in regim ambulatoriu si 30 de
+      specialitati medicale si echipe medici cu experienta in diagnosticarea,
+      tratarea si urmarirea pacientilor cu afectiuni acute sau cronice.
+    </v-card-text>
     <v-card-actions>
+      <v-spacer></v-spacer>
       <v-btn
-        :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
-        elevation="0"
-        @click="show = !show"
-      ></v-btn>
+        @click="goToClinicProfile"
+        color="#e80054"
+        variant="flat"
+        theme="dark"
+        >Vezi detalii</v-btn
+      >
+      <!-- <v-btn color="#f1f1f1" variant="flat">Share</v-btn> -->
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
+import { citiesService } from "@/services/citiesService";
+
 export default {
   data() {
-    return { show: false };
+    return { show: false, clinicCity: "" };
   },
   props: ["clinic"],
+  methods: {
+    findOne() {
+      citiesService.findOne(this.clinic.cityId).then((response) => {
+        if (response.ok) {
+          response.text().then((text) => {
+            if (text) {
+              this.clinicCity = JSON.parse(text).name;
+            }
+          });
+        }
+      });
+    },
+    goToClinicProfile() {
+      this.$router.push({
+        name: "ClinicProfile",
+        params: { id: this.clinic.id },
+      });
+    },
+  },
+  watch: {
+    clinic: {
+      handler() {
+        this.findOne();
+      },
+      immediate: true,
+    },
+  },
 };
 </script>
+
+<style>
+.card-hover:hover .title-hover {
+  color: #e80054;
+}
+</style>

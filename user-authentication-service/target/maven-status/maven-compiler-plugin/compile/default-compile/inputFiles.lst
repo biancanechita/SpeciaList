@@ -1,0 +1,13 @@
+/Users/biancanechita/Code Cabinet/SpeciaList/user-authentication-service/src/main/java/ro/uaic/info/userauthenticationservice/repositories/UserRepository.java
+/Users/biancanechita/Code Cabinet/SpeciaList/user-authentication-service/src/main/java/ro/uaic/info/userauthenticationservice/UserAuthenticationServiceApplication.java
+/Users/biancanechita/Code Cabinet/SpeciaList/user-authentication-service/src/main/java/ro/uaic/info/userauthenticationservice/config/JwtGeneratorInterfaceImpl.java
+/Users/biancanechita/Code Cabinet/SpeciaList/user-authentication-service/src/main/java/ro/uaic/info/userauthenticationservice/config/PersistenceConfig.java
+/Users/biancanechita/Code Cabinet/SpeciaList/user-authentication-service/src/main/java/ro/uaic/info/userauthenticationservice/services/UserService.java
+/Users/biancanechita/Code Cabinet/SpeciaList/user-authentication-service/src/main/java/ro/uaic/info/userauthenticationservice/mappers/UserMapper.java
+/Users/biancanechita/Code Cabinet/SpeciaList/user-authentication-service/src/main/java/ro/uaic/info/userauthenticationservice/exceptions/UserException.java
+/Users/biancanechita/Code Cabinet/SpeciaList/user-authentication-service/src/main/java/ro/uaic/info/userauthenticationservice/entities/User.java
+/Users/biancanechita/Code Cabinet/SpeciaList/user-authentication-service/src/main/java/ro/uaic/info/userauthenticationservice/controllers/UserController.java
+/Users/biancanechita/Code Cabinet/SpeciaList/user-authentication-service/src/main/java/ro/uaic/info/userauthenticationservice/beans/UserDto.java
+/Users/biancanechita/Code Cabinet/SpeciaList/user-authentication-service/src/main/java/ro/uaic/info/userauthenticationservice/entities/BaseEntity.java
+/Users/biancanechita/Code Cabinet/SpeciaList/user-authentication-service/src/main/java/ro/uaic/info/userauthenticationservice/config/JwtGeneratorInterface.java
+/Users/biancanechita/Code Cabinet/SpeciaList/user-authentication-service/src/main/java/ro/uaic/info/userauthenticationservice/entities/UserRole.java

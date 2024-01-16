@@ -1,0 +1,13 @@
+package ro.uaic.info.doctoravailabilitymanagementmicroservice.mappers;
+
+import org.mapstruct.Mapper;
+import ro.uaic.info.doctoravailabilitymanagementmicroservice.beans.DoctorInvestigationExpenseDTO;
+import ro.uaic.info.doctoravailabilitymanagementmicroservice.entities.DoctorInvestigationExpense;
+
+@Mapper
+public interface DoctorInvestigationExpenseMapper {
+
+    DoctorInvestigationExpenseDTO doctorInvestigationExpenseToDoctorInvestigationExpenseDTO(DoctorInvestigationExpense doctorInvestigationExpense);
+
+    DoctorInvestigationExpense doctorInvestigationExpenseDTOToDoctorInvestigationExpense(DoctorInvestigationExpenseDTO doctorInvestigationExpenseDTO);
+}
